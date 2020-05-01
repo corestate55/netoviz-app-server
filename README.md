@@ -23,3 +23,13 @@ for development mode
 ```
 npm run start
 ```
+
+## build docker image
+```
+docker build -t netoviz/app-server .
+```
+
+## run docker image
+```
+docker run -p3000:3000 -p9090:9090 netoviz/app-server
+```
