@@ -1,0 +1,54 @@
+[
+  {
+    "file": "aggregate_check.json",
+    "label": "Node Aggregation Check"
+  },
+  {
+    "file": "bf_l2s3.json",
+    "label": "[batfish-L2] sample3"
+  },
+  {
+    "file": "bf_l2s4.json",
+    "label": "[batfish-L2] sample4"
+  },
+  {
+    "file": "bf_l2s5.json",
+    "label": "[batfish-L2] sample5"
+  },
+  {
+    "file": "bf_l3ex.json",
+    "label": "[batfish-L3] example"
+  },
+  {
+    "file": "bf_l3s1.json",
+    "label": "[batfish-L3] sample1b"
+  },
+  {
+    "file": "diff_test.json",
+    "label": "diff viewer test data"
+  },
+  {
+    "file": "nlink_check.json",
+    "label": "Link check for nested"
+  },
+  {
+    "file": "target.json",
+    "label": "[1] L2 Verbose Model"
+  },
+  {
+    "file": "target2.json",
+    "label": "[2] L2 Compact Model"
+  },
+  {
+    "file": "target3.json",
+    "label": "[3] L2 Aggregated Model"
+  },
+  {
+    "file": "target3a.json",
+    "label": "[3a] L2 Aggr and L3.5"
+  },
+  {
+    "file": "target3b.json",
+    "label": "[3b] L2 Aggr, L3.5 and L2 separate"
+  }
+]
