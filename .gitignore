@@ -1,5 +1,6 @@
 # for Netoviz
-dist/
+main.js
+*.map
 *.sqlite3
 static/*.cache
 static/model/*.xml

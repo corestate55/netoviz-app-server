@@ -1,12 +1,17 @@
-const nodeExternals = require('webpack-node-externals')
+ const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   entry: './server/index.js',
   output: {
-    path: `${__dirname}/dist`,
+    path: __dirname,
     filename: 'main.js'
   },
   target: 'node',
+  context: __dirname,
+  node: {
+    __filename: true,
+    __dirname: true
+  },
   module: {
     rules: [
       {
