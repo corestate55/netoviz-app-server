@@ -18,7 +18,7 @@ for development mode
 npm run build
 ```
 
-## exec
+## run
 for development mode
 ```
 npm run start
@@ -31,5 +31,7 @@ docker build -t netoviz/app-server .
 
 ## run docker image
 ```
-docker run -p3000:3000 -p9090:9090 netoviz/app-server
+docker run -p3001:3001 -p9090:9090 --env-file=.env --name nv-app netoviz/app-server
 ```
+NOTICE: it overwrite `.env` file in image using `--env-file`.
+See: [docker-entrypoint.sh](./docker-entrypoint.sh).

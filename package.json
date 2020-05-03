@@ -12,7 +12,8 @@
     "build": "webpack --mode development",
     "start": "node main.js",
     "release-build": "webpack --mode production",
-    "protoc": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:. ./server/api/grpc/topology-data.proto"
+    "protoc": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:. ./server/api/grpc/topology-data.proto",
+    "docker-build": "docker build -t netoviz/app-server ."
   },
   "dependencies": {
     "@babel/node": "^7.8.7",

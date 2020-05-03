@@ -12,8 +12,8 @@ const grpcImplement = require('./api/grpc')
 const services = require('./api/grpc/topology-data_grpc_pb')
 
 // Init Nuxt.js
-const host = process.env.NETOVIZ_BIND_ADDR
-const httpPort = process.env.NETOVIZ_HTTP_PORT
+const host = '0.0.0.0'
+const httpPort = process.env.NETOVIZ_REST_PORT
 const grpcPort = process.env.NETOVIZ_GRPC_PORT
 
 /** HTTP server */
