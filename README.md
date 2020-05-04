@@ -13,13 +13,24 @@ create db file
 ```
 
 ## build
-for development mode
+for development mode (with REST and gRPC API)
 ```
 npm run build
 ```
 
+for production mode (with REST API)
+```
+npm run release-build
+```
+
+
 ## run
-for development mode
+for development mode (It watches changing of sources and rebuild using nodemon.)
+```
+npm run dev
+```
+
+run builded source
 ```
 npm run start
 ```

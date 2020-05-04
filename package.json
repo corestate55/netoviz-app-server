@@ -9,6 +9,7 @@
     "npm": "6.x"
   },
   "scripts": {
+    "dev": "NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
     "build": "webpack --mode development",
     "start": "node main.js",
     "release-build": "webpack --mode production",
@@ -32,6 +33,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.3",
     "sequelize-cli": "^5.5.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
