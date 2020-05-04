@@ -13,8 +13,7 @@ FROM node:12.16.3-alpine3.11
 WORKDIR /home/netoviz-app-server
 COPY . /home/netoviz-app-server/
 RUN cp docker-entrypoint.sh /usr/local/bin \
-    && npm rebuild \
-    && npm run build
+    && npm rebuild
 
 EXPOSE 3001
 EXPOSE 9090
