@@ -6,6 +6,7 @@ import AlertTable from '../common/alert-table'
 import RESTIntegrator from './integrator'
 
 const express = require('express')
+
 /**
  * Routing API class of Express server.
  * ({@link http://expressjs.com/en/guide/routing.html})
@@ -16,6 +17,12 @@ const express = require('express')
  */
 /** @type {Router} */
 const apiRouter = express.Router()
+apiRouter.use(express.json())
+apiRouter.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST')
+  next()
+})
 
 /** @type {AlertTable} */
 const alertTable = new AlertTable()
@@ -27,7 +34,6 @@ const alertTable = new AlertTable()
  * @type{RESTIntegrator}
  */
 const restApi = new RESTIntegrator('static')
-apiRouter.use(express.json())
 
 // API to receive alert log data.
 apiRouter.post('/alert', (req, res) => {

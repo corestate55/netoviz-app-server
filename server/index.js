@@ -13,8 +13,8 @@ const services = require('./api/grpc/topology-data_grpc_pb')
 
 // Init Nuxt.js
 const host = '0.0.0.0'
-const restPort = process.env.NETOVIZ_REST_PORT
-const grpcPort = process.env.NETOVIZ_GRPC_PORT
+const restPort = process.env.NETOVIZ_REST_LISTEN
+const grpcPort = process.env.NETOVIZ_GRPC_LISTEN
 
 /** HTTP server */
 async function startRESTServer() {
@@ -42,7 +42,8 @@ function startGRPCServer() {
 }
 
 // Run server.
+console.log('[Server] NETOVIZ_API: ', process.env.NETOVIZ_API)
 startRESTServer()
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NETOVIZ_API === 'grpc') {
   startGRPCServer()
 }

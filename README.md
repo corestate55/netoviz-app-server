@@ -23,7 +23,6 @@ for production mode (with REST API)
 npm run release-build
 ```
 
-
 ## run
 for development mode (It watches changing of sources and rebuild using nodemon.)
 ```
@@ -39,10 +38,11 @@ npm run start
 ```
 docker build -t netoviz/app-server .
 ```
-
+or
+```
+npm run docker-build
+```
 ## run docker image
 ```
-docker run -p3001:3001 -p9090:9090 --env-file=.env --name nv-app netoviz/app-server
+docker run -p3000:3001 -p9090:9090 --name nv-app netoviz/app-server
 ```
-NOTICE: it overwrite `.env` file in image using `--env-file`.
-See: [docker-entrypoint.sh](./docker-entrypoint.sh).
