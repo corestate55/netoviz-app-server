@@ -13,4 +13,4 @@ mv ./server/index.js.bak ./server/index.js
 cp -r ${ORIG}/static .
 
 cp ${ORIG}/.editorconfig .
-cp ${ORIG}/dot.env .
+# cp ${ORIG}/dot.env .
